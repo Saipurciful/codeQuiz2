@@ -1,6 +1,6 @@
 #box {
-    position: absolute;
-    left: 20%;
+    /* position: absolute; */
+    margin-left: 20%;
     top: 15%;
     width: 950px;
     height: 600px;
@@ -8,35 +8,39 @@
     border-radius: 40%;
     background-color: rgb(219, 180, 238);
 }
-h1{
+
+h1 {
     font-family: fantasy;
     font-size: 70px;
     color: #7a0785;
     text-align: center;
-   
- 
+
+
 }
-a{
+
+a {
     color: #7a0785;
     font-size: 30px;
-  
+
 }
+
 p {
     text-indent: 10%;
     font-size: 30px;
-    
+
 }
-#question{
+
+#question {
     color: rgb(36, 5, 5);
     font-size: 30px;
     margin-top: 110px;
     padding-right: 20px;
     padding-left: 82px;
-    
- 
+
+
 }
 
-#createDiv{
+#createDiv {
     text-indent: 100px;
     font-size: 20px;
     padding-top: 5px;
@@ -44,6 +48,7 @@ p {
     font-style: oblique;
     color: rgb(100, 6, 112);
 }
+
 #startQuiz {
     display: inline-block;
     padding: 18px 30px;
@@ -56,25 +61,27 @@ p {
     background-color: #7a0785;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999; 
+    box-shadow: 0 9px #999;
     margin-left: 430px;
     margin-top: 40px;
 }
+
 #startQuiz:hover {
     background-color: #dd60e9;
 }
 
 #startQuiz:active {
-  background-color: #8e3e81;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    background-color: #8e3e81;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
+
 #quizBox {
-    margin-top: 120px;
+    margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 15px;
     padding-left: 20px;
-    
+
 }
 
 #currentTime {
@@ -113,7 +120,8 @@ p {
 button {
     border-radius: 8px;
 }
-strong{
+
+strong {
     color: red;
 }
 
@@ -133,6 +141,7 @@ textarea {
 label {
     margin-right: 80px;
 }
+
 input {
     margin-bottom: 20px;
     width: 40%;
@@ -159,7 +168,12 @@ li {
     margin-top: 20px;
     border-top: 1px solid lightgray;
 }
+
 .hide {
     display: none;
 }
 
+#endGame {
+    margin-left: 35%;
+    margin-top: 15%;
+}

@@ -10,7 +10,7 @@
 * [License](#License)
 * [Contributing Guildline](#Contributing-Guildline)
 * [Tests Instructions](#Tests-Instructions)
-* [Questions](#Questions)
+* [Link to The Project Site](#Link-to-the-project-site)
 
 
 
@@ -33,43 +33,21 @@
 
 
 ## Tests Instructions
-* When a user clicks the Start Quiz button, the app will present the user with multiple-choice questions, and the timer will start counting down. <br>
+* When a user clicks the Start Quiz button, the application will present the user with multiple-choice questions, and the timer will start counting down. <br>
 
-<img src="pictures/1st.png" style="width: 350px;"><br>
-
-
-* If the user clicks a wrong answer, the timer will be deleted 10 seconds.<br>
-
-<img src="pictures/viewall.png" style="width: 350px;"><br>
+<img src="pictures/1page.png" style="width: 350px;"><br>
 
 
-* After the user answered all the questions, the time remaining is the user's score.
-* After the user answered all the questions or the timer reaches 0, the game is over.
-* After the user answered all the questions, the app will present the user with "Game Over!" page which will show the user's scores and the user will be able to input their initials to be stored along with their scores.<br>
+* If the user clicks a wrong answer, the timer will be deleted 5 seconds.<br>
+* After the user answered all the questions, the time remaining is the user's score. And if the timer reaches 0, the game is over.
 
-<img src="pictures/addem.png" style="width: 350px;"><br>
+<img src="pictures/questions.png" style="width: 350px;"><br>
 
-* After the user clicks submit button in Game OVER<br>
+* After the user answered all the questions,the application will show the user's scores and the user will be able to input their initials to be stored along with their scores.<br>
 
-<img src="pictures/viewall.png" style="width: 350px;"><br>
+<img src="pictures/score.png" style="width: 350px;"><br>
 
-## Demonstration Video
-
-![](https://media.giphy.com/media/HkRm0ZmUiV5TcW6s8c/giphy.gif) <br>
-
-
-
-
-### Link to Demonstration on YouTube: https://www.youtube.com/watch?v=hc-PU9dJhUk<br>
-
-
-
-
-## Questions
-
-  * Github user name :   saipurciful
-  * Github link : https://github.com/Saipurciful
-  * How to reach me with additional questions : <saipurciful@gmail.com>
+<img src="pictures/highscores.png" style="width: 350px;"><br>
 
 ## Link to the project site. 
 * N/A

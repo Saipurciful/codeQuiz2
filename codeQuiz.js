@@ -77,6 +77,8 @@ function renderQuestions() {
     title.textContent = currentQuestion.title
     answerList.innerHTML = "";
     currentQuestion.choices.forEach(function (choice) {
+
+
         var answerBtn = document.createElement("button");
         answerBtn.setAttribute("class", "choice");
         answerBtn.setAttribute("value", choice);
@@ -87,6 +89,8 @@ function renderQuestions() {
 
     })
 }
+
+
 function answerClick() {
     // console.log(this.value);
     if (this.value !== questions[questionIndex].answer) {
@@ -99,7 +103,7 @@ function answerClick() {
     }
     // move to next question.
     questionIndex++;
-    console.log(questionIndex)
+    // console.log(questionIndex)
 
     // check if end of question array
 
