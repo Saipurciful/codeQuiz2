@@ -47,8 +47,9 @@ var questions = [{
 
 var questionIndex = 0;
 var time = 60;
+var timer;
 var questionDiv = document.getElementById("question");
-var timerDiv = document.getElementById("currentTime");
+var timerDiv = document.getElementById("time");
 var startButton = document.getElementById("startQuiz");
 var answerList = document.getElementById("answers");
 var submitButton = document.getElementById("submit");
@@ -61,7 +62,12 @@ function startQuiz() {
     startScreen.setAttribute("class", "hide");
     questionDiv.removeAttribute("class");
     // start timer
+    timer = setInterval(countDown, 1000); 
 
+    // show time
+    timerDiv.textContent = time;
+
+    // render questions
     renderQuestions();
 
 }
@@ -88,7 +94,8 @@ function answerClick() {
         if (time > 0) {
             time = 0
         }
-
+        // display new time
+        timerDiv.textContent = time;
     }
     // move to next question.
     questionIndex++;
@@ -114,5 +121,16 @@ function gameOver(){
     var finalScore = document.getElementById("#final-score");
     finalScore.textContent= time;
 
+    // stop timer
+    clearInterval (timer) 
+
+}
+function countDown () {
+    time--;
+    timerDiv.textContent = time;
+    // check if time ran out
+    if (time <= 0){
+        gameOver();
+    }
 }
 startButton.onclick = startQuiz
