@@ -53,7 +53,7 @@ var timerDiv = document.getElementById("time");
 var startButton = document.getElementById("startQuiz");
 var answerList = document.getElementById("answers");
 var submitButton = document.getElementById("submit");
-var initial = document.getElementById("Initial");
+var initial = document.getElementById("initial");
 
 // start quiz function
 
@@ -62,7 +62,7 @@ function startQuiz() {
     startScreen.setAttribute("class", "hide");
     questionDiv.removeAttribute("class");
     // start timer
-    timer = setInterval(countDown, 1000); 
+    timer = setInterval(countDown, 1000);
 
     // show time
     timerDiv.textContent = time;
@@ -88,10 +88,10 @@ function renderQuestions() {
     })
 }
 function answerClick() {
-    console.log(this.value);
+    // console.log(this.value);
     if (this.value !== questions[questionIndex].answer) {
         time -= 5;
-        if (time > 0) {
+        if (time < 0) {
             time = 0
         }
         // display new time
@@ -99,6 +99,7 @@ function answerClick() {
     }
     // move to next question.
     questionIndex++;
+    console.log(questionIndex)
 
     // check if end of question array
 
@@ -109,28 +110,48 @@ function answerClick() {
     }
 }
 
-function gameOver(){
+function gameOver() {
+
+    // stop timer
+    clearInterval(timer)
+
     // show the end page
-    var endScreen = document.getElementById("#endGame");
+    var endScreen = document.getElementById("endGame");
+
     endScreen.removeAttribute("class");
 
     // hide the question div
     questionDiv.setAttribute("class", "hide");
 
     // show final scores
-    var finalScore = document.getElementById("#final-score");
-    finalScore.textContent= time;
+    var finalScore = document.getElementById("final-score");
+    finalScore.textContent = time;
 
-    // stop timer
-    clearInterval (timer) 
 
 }
-function countDown () {
+function countDown() {
     time--;
     timerDiv.textContent = time;
     // check if time ran out
-    if (time <= 0){
+    if (time <= 0) {
         gameOver();
     }
 }
+
+function saveScore() {
+    var initials = initial.value.trim();
+    if (initials !== "") {
+        var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+        var newScore = {
+            score: time,
+            initials: initials
+        }
+        // save to local storage
+        highscores.push(newScore);
+        localStorage.setItem("highscores", JSON.stringify(highscores));
+        location.replace("./scores.html");
+
+    }
+}
+submitButton.onclick = saveScore;
 startButton.onclick = startQuiz
