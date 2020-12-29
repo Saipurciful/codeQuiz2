@@ -50,4 +50,4 @@
 <img src="pictures/highscores.png" style="width: 350px;"><br>
 
 ## Link to the project site. 
-* N/A
+* https://saipurciful.github.io/codeQuiz2/
